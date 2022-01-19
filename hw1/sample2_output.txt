@@ -1,0 +1,223 @@
+aero: (0, 0, 1)
+amber: (0, 0, 1)
+apricot: (0, 2, 0)
+aquamarine: (1, 0, 0)
+artichoke: (0, 0, 1)
+auburn: (1, 0, 0)
+avocado: (0, 2, 0)
+awesome: (0, 0, 1)
+boysenberry: (0, 1, 0)
+brass: (0, 1, 0)
+bubbles: (0, 1, 0)
+byzantium: (0, 0, 1)
+carnelian: (0, 1, 0)
+catawba: (0, 1, 0)
+celeste: (1, 0, 1)
+cerise: (0, 1, 0)
+chamoisee: (1, 1, 0)
+chestnut: (1, 0, 0)
+cinnamon: (0, 1, 2)
+citrine: (1, 0, 0)
+citron: (0, 0, 1)
+copper: (4, 0, 0)
+cornsilk: (1, 0, 0)
+desert: (1, 0, 0)
+dirt: (0, 0, 1)
+ebony: (0, 0, 1)
+eggshell: (1, 0, 0)
+eucalyptus: (1, 0, 0)
+fallow: (0, 0, 1)
+fawn: (1, 0, 0)
+folly: (1, 0, 0)
+frogert: (1, 0, 0)
+fuchsia: (0, 0, 1)
+gamboge: (1, 0, 0)
+ginger: (0, 1, 0)
+grape: (1, 0, 0)
+grizzly: (1, 0, 0)
+grullo: (1, 0, 0)
+gunmetal: (1, 1, 0)
+harlequin: (0, 0, 1)
+heliotrope: (0, 1, 0)
+honeydew: (0, 1, 0)
+icterine: (0, 0, 1)
+imperial: (0, 1, 1)
+inchworm: (0, 1, 0)
+independence: (1, 0, 0)
+iris: (0, 1, 0)
+jade: (0, 1, 0)
+jonquil: (0, 0, 1)
+keppel: (0, 1, 1)
+kobe: (1, 0, 0)
+kobi: (0, 0, 1)
+kobicha: (0, 1, 0)
+lava: (1, 0, 0)
+licorice: (0, 0, 1)
+linen: (0, 0, 1)
+mahogany: (0, 1, 0)
+malachite: (1, 1, 0)
+manatee: (1, 0, 1)
+mantis: (2, 1, 1)
+melon: (1, 0, 0)
+milk: (1, 0, 1)
+mindaro: (1, 0, 0)
+ming: (0, 0, 1)
+mystic: (0, 2, 0)
+navy: (0, 1, 1)
+nickel: (0, 0, 1)
+nyanza: (1, 0, 0)
+ochre: (0, 0, 1)
+olive: (1, 0, 2)
+olivine: (1, 0, 0)
+orchid: (1, 1, 0)
+patriarch: (0, 0, 1)
+peach: (0, 1, 0)
+persimmon: (1, 1, 0)
+puce: (0, 0, 1)
+purpureus: (0, 1, 0)
+quartz: (1, 0, 1)
+rackley: (0, 1, 0)
+rajah: (1, 0, 0)
+redwood: (0, 0, 2)
+rhythm: (1, 1, 0)
+ruddy: (0, 1, 1)
+rust: (0, 1, 0)
+saffron: (1, 0, 0)
+sandstorm: (0, 0, 1)
+scarlet: (0, 1, 0)
+sienna: (1, 0, 0)
+skobeloff: (1, 0, 0)
+snow: (0, 0, 1)
+stizza: (0, 0, 1)
+straw: (0, 1, 0)
+sunglow: (1, 1, 0)
+sunray: (0, 1, 0)
+tangelo: (1, 1, 0)
+teal: (0, 1, 0)
+telemagenta: (0, 1, 0)
+timberwolf: (0, 0, 1)
+toolbox: (0, 0, 1)
+topaz: (0, 0, 1)
+turquoise: (0, 0, 1)
+ube: (0, 1, 0)
+veronica: (0, 0, 2)
+violet: (0, 1, 0)
+waterspout: (0, 1, 0)
+wheat: (1, 1, 0)
+wisteria: (1, 0, 0)
+xanadu: (1, 0, 0)
+yellow: (0, 0, 2)
+zaffre: (0, 1, 1)
+0
+0
+['copper', 'mantis', 'chamoisee', 'gunmetal', 'malachite', 'orchid', 'persimmon', 'rhythm', 'sunglow', 'tangelo', 'wheat', 'olive', 'celeste', 'manatee', 'milk', 'quartz', 'aquamarine', 'auburn', 'chestnut', 'citrine', 'cornsilk', 'desert', 'eggshell', 'eucalyptus', 'fawn', 'folly', 'frogert', 'gamboge', 'grape', 'grizzly', 'grullo', 'independence', 'kobe', 'lava', 'melon', 'mindaro', 'nyanza', 'olivine', 'rajah', 'saffron', 'sienna', 'skobeloff', 'wisteria', 'xanadu']
+aero: 1
+amber: 1
+apricot: 4
+aquamarine: 3
+artichoke: 1
+auburn: 3
+avocado: 4
+awesome: 1
+boysenberry: 2
+brass: 2
+bubbles: 2
+byzantium: 1
+carnelian: 2
+catawba: 2
+celeste: 4
+cerise: 2
+chamoisee: 5
+chestnut: 3
+cinnamon: 4
+citrine: 3
+citron: 1
+copper: 12
+cornsilk: 3
+desert: 3
+dirt: 1
+ebony: 1
+eggshell: 3
+eucalyptus: 3
+fallow: 1
+fawn: 3
+folly: 3
+frogert: 3
+fuchsia: 1
+gamboge: 3
+ginger: 2
+grape: 3
+grizzly: 3
+grullo: 3
+gunmetal: 5
+harlequin: 1
+heliotrope: 2
+honeydew: 2
+icterine: 1
+imperial: 3
+inchworm: 2
+independence: 3
+iris: 2
+jade: 2
+jonquil: 1
+keppel: 3
+kobe: 3
+kobi: 1
+kobicha: 2
+lava: 3
+licorice: 1
+linen: 1
+mahogany: 2
+malachite: 5
+manatee: 4
+mantis: 9
+melon: 3
+milk: 4
+mindaro: 3
+ming: 1
+mystic: 4
+navy: 3
+nickel: 1
+nyanza: 3
+ochre: 1
+olive: 5
+olivine: 3
+orchid: 5
+patriarch: 1
+peach: 2
+persimmon: 5
+puce: 1
+purpureus: 2
+quartz: 4
+rackley: 2
+rajah: 3
+redwood: 2
+rhythm: 5
+ruddy: 3
+rust: 2
+saffron: 3
+sandstorm: 1
+scarlet: 2
+sienna: 3
+skobeloff: 3
+snow: 1
+stizza: 1
+straw: 2
+sunglow: 5
+sunray: 2
+tangelo: 5
+teal: 2
+telemagenta: 2
+timberwolf: 1
+toolbox: 1
+topaz: 1
+turquoise: 1
+ube: 2
+veronica: 2
+violet: 2
+waterspout: 2
+wheat: 5
+wisteria: 3
+xanadu: 3
+yellow: 2
+zaffre: 3

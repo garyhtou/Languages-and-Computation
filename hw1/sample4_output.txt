@@ -1,0 +1,83 @@
+aero: (1, 0, 2)
+alabaster: (4, 0, 0)
+almond: (4, 4, 2)
+amaranth: (2, 1, 2)
+amazonite: (3, 6, 4)
+amber: (2, 2, 4)
+amethyst: (2, 3, 2)
+apricot: (3, 1, 2)
+aqua: (3, 3, 0)
+aquamarine: (1, 1, 5)
+arsenic: (2, 3, 2)
+artichoke: (1, 1, 3)
+asparagus: (5, 1, 3)
+auburn: (1, 2, 2)
+aureolin: (2, 1, 0)
+aurometalsaurus: (2, 4, 1)
+avocado: (2, 0, 2)
+awesome: (2, 4, 1)
+azure: (1, 1, 0)
+bazaar: (2, 3, 1)
+beaver: (3, 4, 3)
+begonia: (1, 1, 1)
+beige: (4, 0, 2)
+bisque: (3, 3, 2)
+bistre: (1, 3, 1)
+bittersweet: (1, 1, 1)
+black: (1, 1, 3)
+blond: (2, 2, 1)
+blue: (7, 3, 2)
+blueberry: (2, 0, 2)
+bluebonnet: (1, 5, 2)
+blush: (3, 4, 2)
+bole: (2, 1, 3)
+bone: (2, 4, 7)
+boysenberry: (2, 2, 1)
+brass: (3, 5, 2)
+bronze: (1, 1, 6)
+bubbles: (2, 5, 4)
+buff: (3, 2, 6)
+green: (3, 4, 3)
+7
+3
+['blue', 'asparagus', 'almond', 'beige', 'alabaster', 'amazonite', 'brass', 'beaver', 'green', 'blush', 'bisque', 'aqua', 'buff', 'apricot', 'bubbles', 'bone', 'aurometalsaurus', 'awesome', 'amethyst', 'arsenic', 'bazaar', 'amber', 'blond', 'boysenberry', 'bole', 'amaranth', 'aureolin', 'avocado', 'blueberry', 'bluebonnet', 'bistre', 'auburn', 'bronze', 'aquamarine', 'artichoke', 'black', 'begonia', 'bittersweet', 'azure', 'aero']
+aero: 5
+alabaster: 12
+almond: 22
+amaranth: 10
+amazonite: 25
+amber: 14
+amethyst: 14
+apricot: 13
+aqua: 15
+aquamarine: 10
+arsenic: 14
+artichoke: 8
+asparagus: 20
+auburn: 9
+aureolin: 8
+aurometalsaurus: 15
+avocado: 8
+awesome: 15
+azure: 5
+bazaar: 13
+beaver: 20
+begonia: 6
+beige: 14
+bisque: 17
+bistre: 10
+bittersweet: 6
+black: 8
+blond: 11
+blue: 29
+blueberry: 8
+bluebonnet: 15
+blush: 19
+bole: 11
+bone: 21
+boysenberry: 11
+brass: 21
+bronze: 11
+bubbles: 20
+buff: 19
+green: 20
