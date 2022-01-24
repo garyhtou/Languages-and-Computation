@@ -12,7 +12,7 @@ def tally_last(file):
                 letter = word[-1]
 
                 if letter in letters:
-                    letters[letter] = letters[letter] + 1
+                    letters[letter] += 1
                 else:
                     letters[letter] = 1
 
