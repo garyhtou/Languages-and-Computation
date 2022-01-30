@@ -1,6 +1,6 @@
 """
 Gary Tou
-CPSC 3400, HW 2
+CPSC 3400, HW 2 - Python Time Processor
 1/19/2022
 https://seattleu.instructure.com/courses/1602042/assignments/6989792
 """
