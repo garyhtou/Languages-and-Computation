@@ -45,13 +45,13 @@ def create_time_list(filename):
         list of (int, int, string): A list of time tuples. Each time tuple has three
             elements in this order: (hours, minutes, AM/PM).
 
-    # >>> import doctest
-    # ... import tempfile
-    # ... with tempfile.NamedTemporaryFile() as file:
-    # ...     file.write(b'4 12 AM\n4 12 PM')
-    # ...     file.flush()
-    # ...     create_time_list(file.name)
-    # [(4, 12, 'AM'), (4, 12, 'PM')]
+    >>> # This doctest requires the instructor-provided 'sample1.txt' input file
+    ... try:
+    ...     create_time_list("sample1.txt")
+    ... except FileNotFoundError:
+    ...     ("This doctest failed because the instructor-provided "
+    ...      "'sample1.txt' input file was not present.")
+    [(4, 12, 'PM'), (8, 23, 'PM'), (4, 3, 'AM'), (1, 34, 'AM'), (12, 48, 'PM'), (4, 13, 'AM'), (11, 9, 'AM'), (3, 12, 'PM'), (4, 10, 'PM')]
     """
     times = []
 
@@ -111,7 +111,16 @@ def time_compare_gen(time_list, target):
     [(23, 59)]
     >>> [t for t in time_compare_gen([(4, 12, 'PM')], (4, 12, 'PM'))]
     [(0, 0)]
+    >>> [t for t in time_compare_gen([(4, 12, 'PM')], (4, 12, 'AM'))]
+    [(12, 0)]
+    >>> [t for t in time_compare_gen([(12, 0, 'AM')], (4, 12, 'AM'))]
+    [(19, 48)]
+    >>> [t for t in time_compare_gen([(12, 0, 'PM')], (4, 12, 'PM'))]
+    [(19, 48)]
     """
+
+    if target is None:
+        return
 
     # Get minutes since midnight for target
     target_total_minutes = minutes_since_midnight(target)
@@ -161,6 +170,12 @@ def to_24_hour_time(time):
     (1, 12)
     >>> to_24_hour_time((11, 59, 'PM'))
     (23, 59)
+    >>> to_24_hour_time((11, 59, 'AM'))
+    (11, 59)
+    >>> to_24_hour_time((12, 0, 'AM'))
+    (0, 0)
+    >>> to_24_hour_time((12, 0, 'PM'))
+    (12, 0)
     """
     hours, minutes, meridiem = time
 
@@ -182,6 +197,27 @@ def minutes_since_midnight(time):
 
     Returns:
         int: the number of minutes since midnight
+
+    >>> minutes_since_midnight((4, 12, 'PM'))
+    972
+    >>> minutes_since_midnight((4, 12, 'AM'))
+    252
+    >>> minutes_since_midnight((12, 12, 'AM'))
+    12
+    >>> minutes_since_midnight((12, 12, 'PM'))
+    732
+    >>> minutes_since_midnight((1, 12, 'PM'))
+    792
+    >>> minutes_since_midnight((1, 12, 'AM'))
+    72
+    >>> minutes_since_midnight((11, 59, 'PM'))
+    1439
+    >>> minutes_since_midnight((11, 59, 'AM'))
+    719
+    >>> minutes_since_midnight((12, 0, 'AM'))
+    0
+    >>> minutes_since_midnight((12, 0, 'PM'))
+    720
     """
     hours, minutes = to_24_hour_time(time)
     return hours * 60 + minutes
@@ -198,10 +234,14 @@ def main(filename):
         )
 
         # Print the time that occurs latest in the day
-        print(max(time_list, key=minutes_since_midnight))
+        print(
+            max(time_list, key=minutes_since_midnight)
+        )
 
         # Print the sorted time list in ascending order
-        print(sorted(time_list, key=minutes_since_midnight))
+        print(
+            sorted(time_list, key=minutes_since_midnight)
+        )
 
         # Create a target (first entry in time list) and print the difference of
         # each time in time list from that target
@@ -214,16 +254,17 @@ def main(filename):
     except ImproperTimeError:
         print(("Improper Time Error: The input file contains a time that is "
                "improperly formatted. Please use the following strftime format "
-               "'%I %M %p'. eg. '1 00 PM'"))
+               "'%I %M %p'. eg. '1 00 PM'."))
         sys.exit(1)
     except EmtpyFileError:
-        print("Empty File Error: The input file is empty (zero bytes)")
+        print("Empty File Error: The input file is empty (zero bytes).")
         sys.exit(1)
     except FileNotFoundError:
-        print("File Not Found Error: The input file does not exist")
+        print("File Not Found Error: The input file does not exist.")
         sys.exit(1)
-    except:
-        print("HW2: An error has occured")
+    except Exception as e:
+        print("HW2: An error has occured.")
+        print("    ", e)
 
 
 if __name__ == '__main__':
