@@ -86,3 +86,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Ignore HW2 sample files
+/hw2/sample_*_input.txt
+/hw2/sample_*_output.txt
+
+.DS_Store
