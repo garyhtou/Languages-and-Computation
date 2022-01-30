@@ -70,7 +70,7 @@ def create_time_list(filename):
                 rawHours, rawMinutes, meridiem = line.split(' ')
 
                 # validate and convert inputs
-                hours = int(rawHours)  # will raise ValueError if not an int
+                hours = int(rawHours)
                 minutes = int(rawMinutes)
 
                 validations = [
@@ -80,12 +80,16 @@ def create_time_list(filename):
                     # must have 2 digits (padded with leading 0)
                     len(rawMinutes) == 2,
                 ]
+                # If any of the validations fail, raise an error
                 if not all(validations):
                     raise ImproperTimeError
 
                 times.append((hours, minutes, meridiem))
 
-            except:
+            except ValueError:
+                # catch and reraise error for these following cases:
+                #   - non-integer values for hours and minutes
+                #   - incorrect number of fields
                 raise ImproperTimeError
 
     return times
