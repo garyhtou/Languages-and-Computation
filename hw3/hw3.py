@@ -200,8 +200,8 @@ def format_output(data):
 
 def main(filepath):
     output = sweep_mark(filepath)
-    print("Marked:", format_output(output["marked"]))
-    print("Swept:", format_output(output["swept"]))
+    print("Marked nodes:", format_output(output["marked"]))
+    print("Swept nodes:", format_output(output["swept"]))
 
 
 if __name__ == '__main__':
