@@ -112,12 +112,11 @@ def sweep_mark(filename):
         Args:
             vertex (string): The vertex to follow (start from)
         """
-        if vertex not in marked:
-            marked.append(vertex)
-
         heads = graph.heads(vertex)
         for v in heads:
-            follow(v)
+            if v not in marked:
+                marked.append(vertex)
+                follow(v)
 
     # Variable to hold the graph
     graph = None
