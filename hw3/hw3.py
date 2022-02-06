@@ -115,7 +115,7 @@ def sweep_mark(filename):
         heads = graph.heads(vertex)
         for v in heads:
             if v not in marked:
-                marked.append(vertex)
+                marked.append(v)
                 follow(v)
 
     # Variable to hold the graph
