@@ -1,0 +1,2 @@
+Marked nodes: 0 2
+Swept nodes: 1 3 4 5
