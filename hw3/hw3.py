@@ -97,12 +97,11 @@ def sweep_mark(filename):
 
     >>> # This doctest requires the instructor-provided sample input file
     ... try:
-    ...     parse("sample1.txt")
+    ...     sweep_mark("example.csv")
     ... except FileNotFoundError:
     ...     ("This doctest failed because the instructor-provided "
-    ...      "'sample1.txt' input file was not present.")
-    Marked nodes: 0 1 2 6 7
-    Swept nodes: 3 4 5 8 9
+    ...      "'example.csv' input file was not present.")
+    {'marked': [0, 1, 2, 6, 7], 'swept': [3, 4, 5, 8, 9]}
     """
 
     def follow(vertex):
@@ -164,11 +163,11 @@ def parse(file):
 
     >>> # This doctest requires the instructor-provided sample input file
     ... try:
-    ...     with open(filename) as file:
+    ...     with open("example.csv") as file:
     ...         parse(file)
     ... except FileNotFoundError:
     ...     ("This doctest failed because the instructor-provided "
-    ...      "'sample1.txt' input file was not present.")
+    ...      "'example.csv' input file was not present.")
     {'numBlocks': 10, 'edges': [('p', '0'), ('0', '1'), ('1', '7'), ('r', '2'), ('2', '0'), ('4', '1'), ('4', '5'), ('5', '4'), ('5', '9'), ('s', '6'), ('8', '4'), ('9', '8')]}
     """
     graphData = {"numBlocks": None, "edges": []}
