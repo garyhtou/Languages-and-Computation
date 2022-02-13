@@ -85,10 +85,9 @@ let rec count (func: (int -> bool), tree: BST) =
     match tree with
     | Empty -> 0
     | TreeNode (nodeVal, left, right) ->
-        if func nodeVal then
-            1 + count (func, left) + count (func, right)
-        else
-            count (func, left) + count (func, right)
+        (if func nodeVal then 1 else 0)
+        + count (func, left)
+        + count (func, right)
 
 
 // Returns the number of nodes that contain even integers. REQUIREMENT: This
