@@ -4,9 +4,50 @@ to hw6.py. You can use (and modify) hw6_test.py to test your submission. Do NOT
 hand in hw6_template.py or hw6_test.py.
 """
 
-a = r'Your regular expression here for problem 1.a.'  # FIXME
-b = r'Your regular expression here for problem 1.b.'  # FIXME
-c = r'Your regular expression here for problem 1.c.'  # FIXME
+
+# Create a single regular expression that matches a string of digits and
+# contains exactly two fives. Examples of acceptable strings include: "15445 " ,
+# " 55 " , " 05563 " . However, the string is to be rejected if it contains
+# anything other than digits.
+a = r'^\d*5\d*5\d*$'
+
+
+# Create a single regular expression that matches a time expressed in the form
+# "1:45 PM".
+# Additional notes:
+#   - The hours part must be a number from 1 to 12, the minutes range from 00 to
+#     59, and the time must indicate either AM or PM (uppercase only and
+#     preceded by exactly one space).
+b = r'1?\d:\d{2} (:?AM|PM)'
+
+
+# Create a single regular expression that matches a string representing a comma
+# separated list of variable names such as: hello, get_max, sum3
+# Additional notes:
+#   - A variable name consists of letters, digits, and underscores but cannot
+#     start with a digit.
+#   - There is exactly one space after every comma. No other spaces are allowed.
+#   - Commas and spaces are not allowed before the first name and after the last
+#     name.
+#   - An empty string is considered a match.
+#   - It is not a match if the list is not properly formed or if one of the
+#     variable names is invalid.
+c = r''  # FIXME
+
+# Create a substitution, using a regular expression, that replaces all less than
+# (<) and less than and equal to (<=) expressions with the equivalent greater
+# than (>) or greater than or equal (>=). For instance, "a < b" would be
+# replaced with "b > a".
+# Additional notes:
+#   - Only swap the "word" before and after the comparison. A word consists of
+#     letters, digits, and underscores.
+#   - Zero or more spaces may separate the comparison operator and the words.
+#     When performing the substitution, use one space to separate the comparison
+#     operator from the words.
+#   - Do not perform the substitution if there is comparison does not contain a
+#     word before and/or after the comparison. For example, a '<' sign appears at
+#     the beginning of the string.
+#   - You may assume that the string does not contain any chained comparisons
+#     like a < b < c.
 d = r'Your regular expression here for problem 1.d.'  # FIXME
 d_sub = r'Your substitution string here for problem 1.d'  # FIXME
-
