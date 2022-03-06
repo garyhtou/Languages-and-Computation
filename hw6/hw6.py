@@ -18,7 +18,7 @@ a = r'^[012346789]*5[012346789]*5[012346789]*$'
 #   - The hours part must be a number from 1 to 12, the minutes range from 00 to
 #     59, and the time must indicate either AM or PM (uppercase only and
 #     preceded by exactly one space).
-b = r'(?:1[0-2]|[1-9]):\d{2} (?:AM|PM)'
+b = r'(?:^|\s)(?:1[0-2]|[1-9]):\d{2} (?:AM|PM)'
 
 
 # Create a single regular expression that matches a string representing a comma
