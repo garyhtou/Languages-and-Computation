@@ -1,6 +1,6 @@
 A B C D
-- 1 2 3 7
-- 5 2 3 6 # 1. opt A
+- 1 2 3 7 # 0. starting state
+- 5 2 3 6 # 1. opt A (also acts as A+ for input 'D')
 - 5 2 3 7 # 2. B
 - 7 7 7 4 # 3. C. next D
 - 5 2 3 7 # 4. CD

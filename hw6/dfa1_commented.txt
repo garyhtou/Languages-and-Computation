@@ -1,9 +1,9 @@
 A B C
-- 2 3 1
-- 5 4 1 # missing a, b
-- 2 6 5 # missing b, c
-- 6 3 4 # missing a, c
-- 7 4 4 # missing a
-- 5 7 5 # missing b
-- 6 6 7 # missing c
-+ 7 7 7
+- 2 3 1 # 0. starting state
+- 5 4 1 # 1. missing a, b
+- 2 6 5 # 2. missing b, c
+- 6 3 4 # 3. missing a, c
+- 7 4 4 # 4. missing a
+- 5 7 5 # 5. missing b
+- 6 6 7 # 6. missing c
++ 7 7 7 # 7. string contains all letters

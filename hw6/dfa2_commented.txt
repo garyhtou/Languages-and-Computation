@@ -1,5 +1,5 @@
 X Y Z
-- 1 0 3
+- 1 0 3 # 0. starting state
 - 2 0 3 # 1. one x
 + 2 2 2 # 2. two x
 - 1 0 4 # 3. one z
