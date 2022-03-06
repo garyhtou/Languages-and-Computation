@@ -9,7 +9,7 @@ hand in hw6_template.py or hw6_test.py.
 # contains exactly two fives. Examples of acceptable strings include: "15445 " ,
 # " 55 " , " 05563 " . However, the string is to be rejected if it contains
 # anything other than digits.
-a = r'^\d*5\d*5\d*$'
+a = r'^[012346789]*5[012346789]*5[012346789]*$'
 
 
 # Create a single regular expression that matches a time expressed in the form
@@ -18,7 +18,7 @@ a = r'^\d*5\d*5\d*$'
 #   - The hours part must be a number from 1 to 12, the minutes range from 00 to
 #     59, and the time must indicate either AM or PM (uppercase only and
 #     preceded by exactly one space).
-b = r'1?\d:\d{2} (:?AM|PM)'
+b = r'(?:1\d|[1-9]):\d{2} (?:AM|PM)'
 
 
 # Create a single regular expression that matches a string representing a comma
@@ -32,7 +32,7 @@ b = r'1?\d:\d{2} (:?AM|PM)'
 #   - An empty string is considered a match.
 #   - It is not a match if the list is not properly formed or if one of the
 #     variable names is invalid.
-c = r''  # FIXME
+c = r'(?:^$|^(?:[a-zA-Z_][a-zA-Z_0-9]*)(?:, [a-zA-Z_][a-zA-Z_0-9]*)*$)'
 
 # Create a substitution, using a regular expression, that replaces all less than
 # (<) and less than and equal to (<=) expressions with the equivalent greater
@@ -49,5 +49,5 @@ c = r''  # FIXME
 #     the beginning of the string.
 #   - You may assume that the string does not contain any chained comparisons
 #     like a < b < c.
-d = r'Your regular expression here for problem 1.d.'  # FIXME
-d_sub = r'Your substitution string here for problem 1.d'  # FIXME
+d = r'(?P<first>[a-zA-Z0-9_]+) *(?P<gt><)(?P<eq>=)? *(?P<second>[a-zA-Z0-9_]+)'
+d_sub = r'\g<second> >\g<eq> \g<first>'

@@ -62,3 +62,20 @@ if __name__ == '__main__':
         print('passed')
     else:
         print("FAILED\nexpected: '{}'\ngot:      '{}'".format(expected, result))
+
+    print('part d test 3')
+    result = re_d.sub(hw6.d_sub, '>   a  >= b  c<= d')
+    expected = '>   a  >= b  d >= c'
+    if result == expected:
+        print('passed')
+    else:
+        print("FAILED\nexpected: '{}'\ngot:      '{}'".format(expected, result))
+
+
+    print('part d test 4')
+    result = re_d.sub(hw6.d_sub, '>')
+    expected = '>'
+    if result == expected:
+        print('passed')
+    else:
+        print("FAILED\nexpected: '{}'\ngot:      '{}'".format(expected, result))
