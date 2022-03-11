@@ -1,0 +1,1 @@
+pipeline fraction = arithmetic / left right quotient | project quotient ;

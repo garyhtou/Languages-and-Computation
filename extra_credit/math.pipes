@@ -1,0 +1,14 @@
+pipeline add =
+  arithmetic + first second Alice ;
+pipeline sub =
+  arithmetic - first second output ;
+pipeline mul =
+  arithmetic * first second Bob ;
+pipeline div =
+  arithmetic / first second output ;
+pipeline mod =
+  arithmetic % first second output ;
+pipeline fail =
+  arithmetic % first something Calvin ;
+
+

@@ -1,0 +1,12 @@
+	
+  pipeline spacingLeading = project left ;
+pipeline  spacingMultiLine    =     
+     project   right   ;
+
+
+
+
+
+pipeline 	 spacingReverse    =    		 
+
+     project  	 right left   	  ;

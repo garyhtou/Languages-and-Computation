@@ -1,0 +1,4 @@
+pipeline timeDifference =
+  arithmetic - actualDepTime schedDepTime depTimeDiff |
+  arithmetic - actualArrTime schedArrTime arrTimeDiff |
+  project depTimeDiff arrTimeDiff ;
