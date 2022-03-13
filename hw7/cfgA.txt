@@ -1,0 +1,14 @@
+Start -> 0 OneOne | 1 ZeroOne | ZeroZero
+ZeroZero -> 𝞮
+ZeroOne -> 0 OneTwo | 1 ZeroTwo
+OneOne -> 0 TwoTwo | 1 OneTwo
+TwoOne -> 0 ThreeTwo | 1 TwoTwo
+ThreeOne -> 0 OneTwo | 1 ThreeTwo | 𝞮
+ZeroTwo -> 0 OneThree | 1 ZeroThree
+OneTwo -> 0 TwoThree | 1 OneThree
+TwoTwo -> 0 ThreeThree | 1 TwoThree
+ThreeTwo -> 0 OneThree | 1 ThreeThree | 𝞮
+ZeroThree -> 0 OneOne | 1 ZeroOne | 𝞮
+OneThree -> 0 TwoOne | 1 OneOne | 𝞮
+TwoThree -> 0 ThreeOne | 1 TwoOne | 𝞮
+ThreeThree -> 0 OneOne | 1 ThreeOne | 𝞮

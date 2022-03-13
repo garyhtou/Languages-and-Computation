@@ -1,0 +1,11 @@
+Start -> GroupOne
+GroupOne -> x GroupOneX | GroupTwo
+GroupOneX -> z GroupOneZ
+GroupOneZ -> GroupOne | GroupTwo
+GroupTwo -> GroupTwoOptOne | GroupTwoOptTwo
+GroupTwoOptOne -> z GroupTwoOptOneZ
+GroupTwoOptOneZ -> y GroupTwo | GroupTwo | End
+GroupTwoOptTwo -> x GroupTwoOptTwoX
+GroupTwoOptTwoX -> x GroupTwoOptTwoXX
+GroupTwoOptTwoXX -> GroupTwo | End
+End -> 𝞮
