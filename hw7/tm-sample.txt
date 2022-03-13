@@ -1,0 +1,11 @@
+# Sample Turing machine
+# accepts any binary string that has two consecutive 1s
+# output is the input where the left-most pair of 1s is replaced by 0s
+0, 3
+
+# Transition function, 𝞭
+0, 0, 0, 0, R  # in q0 see a 0 then stay in q0 but move right
+0, 1, 1, 1, R  # in q0 see a 1, move to q1 and the right
+1, 0, 0, 0, R  # in q1 see a 0, so go back to start
+1, 1, 2, 0, L  # in q1 see (a second) 1, so go to q2, replace 1 on tape with 0, move left
+2, 1, 3, 0, R  # in q2, finish up by replacing the first 1 with a 0 and go to accepting state q3
