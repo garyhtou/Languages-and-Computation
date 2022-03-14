@@ -1,0 +1,55 @@
+# Design a Turing machine on the input alphabet  that accepts strings
+# represented using this Python regular expression that uses back references:
+# r'^([de]*)f\1$' For this machine, the final tape output does not matter. You
+# will need to modify the tape in order to complete this exercise.
+
+# Starting state is 0, accepting state is 40.
+0, 40
+
+# Transition function, 𝞭
+# current state, head reading, transition to state, overwrite with, move L/R
+
+# Starting (accept D or E)
+0, d, 1, d, L
+0, e, 2, e, L
+1, B, 10, B, R
+2, B, 20, B, R
+
+# Process D
+10, d, 11, B, R # group 1, input d
+11, d, 12, d, R # go to group 2
+11, e, 12, e, R
+11, f, 14, f, R # found start of group 2. Last char of group 1
+12, d, 12, d, R
+12, e, 12, e, R
+12, f, 13, f, R # found start of group 2
+13, B, 13, B, R # move past blanks in group 2
+13, d, 30, B, L # found d in group 2. Move back to next char in group 1
+# Last char of group 1
+14, B, 14, B, R # move past blanks in group 2
+14, d, 15, B, R # found d in group 2. Check to make sure it's the end of group 2
+15, B, 40, B, R # accepting
+
+# Process E
+20, e, 21, B, R # group 1, input e
+21, d, 22, d, R # go to group 2
+21, e, 22, e, R
+21, f, 24, f, R # found start of group 2. Last char of group 1
+22, d, 22, d, R
+22, e, 22, e, R
+22, f, 23, f, R # found start of group 2
+23, B, 23, B, R # move past blanks in group 2
+23, e, 30, B, L # found e in group 2. Move back to next char in group 1
+# Last char of group 1
+24, B, 24, B, R # move past blanks in group 2
+24, e, 25, B, R # found e in group 2. Check to make sure it's the end of group 2
+25, B, 40, B, R # accepting
+
+# Move back to group 1
+30, B, 30, B, L # move past blanks in group 2
+30, f, 31, f, L # found start of group 2
+31, d, 31, d, L # found end of group 1
+31, e, 31, e, L
+32, d, 32, d, L # continue to start of group 1
+32, e, 32, e, L
+31, B, 0, B, R # found start of group 1

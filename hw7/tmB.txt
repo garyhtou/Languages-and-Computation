@@ -1,0 +1,35 @@
+# Design a Turing machine on the input alphabet   that removes all z characters
+# from the input such that there are no gaps. If the input string is xzzyxzy,
+# the output should be xyxy. For this machine, it does not matter if the string
+# is accepted or rejected. Hint: The final string does not need to reside on the
+# same part of the tape where it started.
+
+# Starting state 10, accepting state 0
+10, 0
+
+# Transition function, 𝞭
+# current state, head reading, transition to state, overwrite with, move L/R
+10, x, 10, x, R
+10, y, 10, y, R
+10, z, 20, B, R # Found a z. Shift everything to the left
+10, B, 00, B, R # End of string. No z left. Done!
+
+
+# SHIFTING ALL TO THE LEFT
+20, x, 30, B, L # Shift an x
+20, y, 40, B, L # Shift an y
+20, z, 50, B, L # Shift an z
+20, B, 70, B, L # Found the end of string. Return to start of string
+
+30, B, 60, x, R # Finish shifting an x
+40, B, 60, y, R # Finish shifting an y
+50, B, 60, z, R # Finish shifting an z
+
+60, B, 20, B, R # Shift the next char
+
+# Return to start of string
+70, B, 71, B, L # Move past blank for intended next shift
+71, x, 71, x, L
+71, y, 71, y, L
+71, z, 71, z, L
+71, B, 10, B, R # found the start of string
